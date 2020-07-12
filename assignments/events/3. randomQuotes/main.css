@@ -1,0 +1,12 @@
+body {
+    background-color: grey;
+}
+
+div {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    color: white;
+    font-weight: bolder;
+    border: 1px solid white;
+    margin: 10% 10% 10% 10%;
+}
