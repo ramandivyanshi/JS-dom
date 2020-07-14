@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Learning About Nodes</title>
 
     <style>
-      * {
-        border: 2px solid #dedede;
-        padding: 15px;
-        margin: 15px;
-      }
-      html {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        max-width: 600px;
-        font-family: sans-serif;
-        color: #333;
-      }
+        * {
+            border: 2px solid #dedede;
+            padding: 15px;
+            margin: 15px;
+        }
+        
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            max-width: 600px;
+            font-family: sans-serif;
+            color: #333;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <h1>Shark World</h1>
     <p>
-      The world's leading source on <strong>shark</strong> related information.
+        The world's leading source on <strong>shark</strong> related information.
     </p>
     <h2>Types of Sharks</h2>
     <ul>
-      <li>Hammerhead</li>
-      <li>Tiger</li>
-      <li>Great White</li>
+        <li>Hammerhead</li>
+        <li>Tiger</li>
+        <li>Great White</li>
     </ul>
-  </body>
 
-  <script>
+
+</body>
+
+<script>
     const h1 = document.getElementsByTagName("h1")[0];
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
     // Your code goes here
-  </script>
+
+    ul.firstElementChild.style.background = 'yellow' //1
+
+    var all = document.querySelectorAll('li');
+    for (var color of all) {
+        color.style.background = 'turquoise'
+    }; //2
+
+    var list = document.querySelectorAll('li');
+    list[list.length - 1].style.background = 'pink'; //3
+
+    var mid = list[1];
+    mid; //4
+
+    mid.nextElementSibling.style.background = 'aquamarine';
+    mid.previousElementSibling.style.background = 'coral'; //5
+</script>
+
 </html>

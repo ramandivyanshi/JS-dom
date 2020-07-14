@@ -1,11 +1,7 @@
+var output = document.getElementById('output');
+var author = document.getElementById('author');
 var quotes;
-
-// Write your code here
-
-
-
-quotes = [
-    {
+quotes = [{
         "quoteAuthor": "Thomas Edison",
         "quoteText": "Genius is one percent inspiration and ninety-nine percent perspiration."
     },
@@ -314,3 +310,10 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+document.addEventListener('click', function() {
+
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+    output.innerText = `"${randomQuote.quoteText}"`
+    author.innerText = `"${randomQuote.quoteAuthor}"`
+})

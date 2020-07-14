@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>About Me</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1>About Me</h1>
 
     <ul>
-      <li>Nickname: <span id="nickname"></span></li>
-      <li>Favorites: <span id="favorites"></span></li>
-      <li>Hometown: <span id="hometown"></span></li>
+        <li>Nickname: <span id="nickname"></span></li>
+        <li>Favorites: <span id="favorites"></span></li>
+        <li>Hometown: <span id="hometown"></span></li>
     </ul>
-  </body>
+
+</body>
+<script>
+    //1
+    document.body.style.fontFamily = 'Arial, sans-serif'; //2
+
+    var detail1 = document.getElementById('nickname');
+    detail1.innerHTML = "Divyanshi";
+    var detail2 = document.getElementById('favorites');
+    detail2.innerHTML = "Travel";
+    var detail3 = document.getElementById('hometown');
+    detail3.innerHTML = "Lucknow"; //3
+
+    document.querySelectorAll('li').className = 'listitem';
+    var list = document.querySelectorAll('li');
+    for (var text of list) {
+        text.style.color = 'red';
+    } //4
+
+    var img = document.createElement('img');
+    img.src = "image.png";
+    img.setAttribute('height', '200px');
+    img.setAttribute('width', '400px');
+    document.body.append(img); //5
+</script>
+
 </html>

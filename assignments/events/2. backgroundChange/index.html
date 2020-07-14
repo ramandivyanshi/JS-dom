@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Change Background Color</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  </head>
-  <body>
-    <script src="main.js"></script>
-  </body>
+</head>
+
+<body>
+    <script src="main.js">
+        var allchar = "0123456789ABCDEF";
+        document.addEventListener("click", changeBg);
+
+        function changeBg() {
+            var colors = "";
+            for (var i = 0; i < 6; i++) { // color format is of 6 digit- e.g. A374AB
+                colors += allchar[Math.floor(Math.random() * 16)]; //return string of 16bit of given allchar
+            }
+            document.body.style.background = "#" + colors;
+        }
+    </script>
+</body>
+
 </html>
